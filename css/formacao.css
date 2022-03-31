@@ -1,0 +1,201 @@
+.formacao {
+  background-color: #141414;
+  color: white;
+}
+
+.formacao-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  position: relative;
+}
+
+.formacao-container::after {
+  display: block;
+  content: "";
+  width: 128px;
+  height: 128px;
+  background: url("../img/detalhe.svg") no-repeat center;
+  bottom: -64px;
+  position: absolute;
+}
+
+.formacao .titulo-lateral-destaque {
+  color: #000000;
+  max-width: 5ch;
+}
+
+.formacao-texto {
+  color: #a3a3a3;
+  font-size: 1.5rem;
+  margin-bottom: 60px;
+  max-width: 40ch;
+}
+
+.formacao-texto strong {
+  color: #ffffff;
+}
+
+.faculdades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.lista-faculdade {
+  display: flex;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 4px;
+  flex: 1;
+  flex-direction: column;
+}
+
+.faculdade-nivel {
+  text-transform: uppercase;
+  color: #a3a3a3;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.faculdade-curso {
+  color: #ffffff;
+  font-size: 1.2rem;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  flex: 1;
+  position: relative;
+}
+
+.faculdade-curso::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#b6f829, #c7dd0a);
+  top: 2px;
+  left: -24px;
+}
+
+.faculdade-instituicao {
+  color: #a3a3a3;
+  font-size: 1.1rem;
+}
+
+.cursos-intensivos {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.cursos-intensivos::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("../img/cursos.svg") no-repeat center;
+  position: absolute;
+  top: -5px;
+  left: -35px;
+}
+
+.cursos-intensivos h3 {
+  color: #a3a3a3;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.cursos-intensivos li {
+  color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 2;
+  display: flex;
+  justify-content: space-between;
+}
+
+.cursos-intensivos span {
+  color: #a3a3a3;
+}
+
+.idiomas {
+  position: relative;
+}
+
+.idiomas::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url("../img/idiomas.svg") no-repeat center;
+  position: absolute;
+  top: -5px;
+  left: -35px;
+}
+
+.idiomas h3 {
+  color: #a3a3a3;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.idiomas li {
+  color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.idiomas span {
+  color: #a3a3a3;
+}
+
+@media (max-width: 800px) {
+  .formacao-container {
+    grid-template-columns: 1fr;
+    padding: 60px 40px;
+    gap: 40px;
+  }
+
+  .formacao .titulo-lateral-destaque {
+    color: #ffffff;
+  }
+
+  .formacao-texto {
+    font-size: 1.2rem;
+  }
+
+  .faculdades {
+    margin-bottom: 100px;
+  }
+
+  .cursos-intensivos::before {
+    top: -35px;
+    left: 0px;
+  }
+
+  .cursos-intensivos {
+    margin-bottom: 80px;
+  }
+
+  .idiomas::before {
+    top: -35px;
+    left: 0px;
+  }
+
+  .idiomas {
+    margin-bottom: 20px;
+  }
+
+  .formacao-container::after {
+    left: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .formacao-container::after {
+    display: none;
+  }
+}
